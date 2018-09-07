@@ -16,11 +16,15 @@ Now we'll start rebasing dev branch
 
 `git rebase --interactive a6a7e9222b122a2e10573545583edddcd3b9b4f3`
 
-Replace `pick` for `edit` in the unsigned commit and save, in this case "Second paragraph".
+Replace `pick` with `edit` in the unsigned commit and save, in this case "Second paragraph".
 
 ![edit vim](https://image.ibb.co/jEQ3ue/Screen_Shot_2018_09_07_at_12_46_31_AM.png)
 
-We have to finish the rebase process and this will verify the commit automatically.
+To verify the unsigned commit we need at least to make one change, so we'll replace the commit message with previous one. Next command will prompt vim so just save with `:wq`
+
+`git commit --amend '-S'`
+
+We have to finish the rebase process.
 
 `git rebase --continue`
 
