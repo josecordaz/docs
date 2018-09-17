@@ -9,3 +9,11 @@
 ```bash
     git push origin --delete the_remote_branch
 ```
+### Marshall golang
+
+```go
+strObj, err := json.MarshalIndent(obj, "", " ")
+if err != nil {
+    panic(err)
+}
+```
