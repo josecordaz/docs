@@ -17,3 +17,12 @@ if err != nil {
     panic(err)
 }
 ```
+
+### Unmarshall golang
+
+```go
+if err := json.Unmarshal(byt, &dat); err != nil {
+     panic(err)
+}
+fmt.Println(dat)
+```
