@@ -7,5 +7,4 @@ git rebase --exec 'git commit --amend --no-edit -n -S' -i 8fd7b22
 git push --force
 ```
 
-![Source](https://stackoverflow.com/questions/41882919/is-there-a-way-to-gpg-sign-all-previous-commits)
-
+[Source](https://stackoverflow.com/questions/41882919/is-there-a-way-to-gpg-sign-all-previous-commits)
