@@ -30,7 +30,14 @@ fmt.Println(dat)
 ### Log info to file
 
 ```go
-f, err := os.OpenFile("testlogfile", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+
+ex, err := os.Executable()
+if err != nil {
+	return err
+}
+exPath := filepath.Dir(ex)
+
+f, err := os.OpenFile(exPath+string(os.PathSeparator)+"testlogfile", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0755)
 if err != nil {
     log.Fatalf("error opening file: %v", err)
 }
